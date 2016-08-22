@@ -14,6 +14,6 @@ function sign(array $kv, $salt){
 }
 
 //校验签名
-function check_sign($kv, $salt, $sign){
+function check_sign(array $kv, $salt, $sign){
     return sign($kv, $salt) === $sign;
 }
