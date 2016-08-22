@@ -1,7 +1,9 @@
 <?php
 
-
-function encrypt(array $kv, $salt){
+/**
+ * 签名 
+ */
+function sign(array $kv, $salt){
     $sign = '';
     $tmp = array();
     ksort($kv);
@@ -11,6 +13,7 @@ function encrypt(array $kv, $salt){
     return md5(join('&', $tmp) . $salt);
 }
 
+//校验签名
 function check_sign($kv, $salt, $sign){
-    return encrypt($kv, $salt) === $sign;
+    return sign($kv, $salt) === $sign;
 }
