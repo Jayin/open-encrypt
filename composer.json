@@ -1,0 +1,12 @@
+{
+    "name": "jayin/open-encrypt",
+    "type": "git",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jayin Ton",
+            "email": "tonjayin@gmail.com"
+        }
+    ],
+    "require": {}
+}
